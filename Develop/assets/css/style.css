@@ -7,6 +7,8 @@
   --light: rgba(238, 238, 247, 1);
 }
 
+
+
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: var(--primary);
@@ -14,13 +16,12 @@ body {
 }
 
 .topnav {
-  border: 1px black solid;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  /* background-color: var(--tertiary); */
+  background-color: var(--tertiary);
 }
 
 .title {
@@ -29,7 +30,6 @@ body {
 }
 
 .navitems {
-  border: 1px solid orange;
   display: flex;
   flex-direction: row;
   gap: 2.5rem;
@@ -41,12 +41,93 @@ body {
   text-decoration: none;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 
-/* portfolio project images */
-/* TODO: Add portfolio project images here*/
+.sectiontitle {
+  display: flex;
+  margin-right: 2rem;
+  font-size: 3rem;
+  border-right: .2rem solid var(--tertiary);
+  text-decoration: none;
+}
 
-/* media queries */
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: .5rem;
+  text-align: center;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+
+.img {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.firstimg {
+  min-height: 50rem;
+  flex-basis: 100%;
+}
+
+.placeholders {
+  max-height: 30rem;
+  min-height: 5rem;
+  flex-basis: 50%;
+}
+
+.lastfour {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.contactbox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: var(--tertiary); */
+}
+
+.contactbox p {
+  font-size: 1.5rem;
+}
 
 /* TODO: add media query for a max-width of 980px */
+@media screen and (max-width: 992px) {
+  .topnav {
+    flex-direction: column;
+  }
+}
 
 /* TODO: add media query for a max-width of 768px */
+
+@media screen and (max-width: 768px) {
+  .sectiontitle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .firstimg {
+    max-height: 10rem;
+  }
+
+  .lastfour {
+    max-height: 1rem;
+  }
+}
